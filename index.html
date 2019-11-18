@@ -22,23 +22,25 @@
       </header>
       <div class="splashScreen">
         <div class="title">Brunch</div>
-        <div class="descp">Full Website</div>
+        <div class="sub-title">Full Website</div>
         <button><a href="#">Read more</a></button>
       </div>
     </section>
     <!-- End of Front-page section -->
-    <section class="site-info">
-      <div>
-        <h2>Indian traditional flavours</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quod
-          non? Atque earum provident vel eveniet facilis tenetur itaque incidunt
-          eos ex reiciendis officiis, perspiciatis iure numquam explicabo
-          officia commodi?
-        </p>
-      </div>
-      <div class="info-img"><img /></div>
-    </section>
+    <div class="container">
+      <section class="site-info">
+        <div class="descp">
+          <h2>Indian traditional flavours</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quod
+            non? Atque earum provident vel eveniet facilis tenetur itaque
+            incidunt eos ex reiciendis officiis, perspiciatis iure numquam
+            explicabo officia commodi?
+          </p>
+        </div>
+        <div class="info-img"><img src="./images/site-info-image.jpg" /></div>
+      </section>
+    </div>
     <!-- End of site-info section -->
     <section class="product-services">
       <div>
@@ -72,9 +74,9 @@
     <!-- End of Product services section-->
     <section class="products-showcase">
       <div>
-        <h3>India</h3>
-        <p>On your plate</p>
-        <div class="row-odd">
+        <h3 class="title">India</h3>
+        <p class="sub-title">On your plate</p>
+        <div class="row odd">
           <div class="product">
             <img
               src="./images/products-section/tikka-chicken.jpg"
@@ -88,23 +90,23 @@
               </p>
               <p class="price">$14.95</p>
             </div>
-            <div class="product">
-              <img
-                src="./images/products-section/spicy-wedges.jpg"
-                alt="Spicy wedges image"
-              />
-              <div>
-                <h4>Spicy Wedges</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Nulla, rerum.
-                </p>
-                <p class="price">$10.95</p>
-              </div>
+          </div>
+          <div class="product">
+            <img
+              src="./images/products-section/spicy-wedges.jpg"
+              alt="Spicy wedges image"
+            />
+            <div>
+              <h4>Spicy Wedges</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
+                rerum.
+              </p>
+              <p class="price">$10.95</p>
             </div>
           </div>
         </div>
-        <div class="row-even">
+        <div class="row even">
           <div class="product">
             <img
               src="./images/products-section/chicken-curry.jpg"
@@ -118,23 +120,23 @@
               </p>
               <p class="price">$14.95</p>
             </div>
-            <div class="product">
-              <img
-                src="./images/products-section/red-curry.jpg"
-                alt="Red curry image"
-              />
-              <div>
-                <h4>Red curry</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Nulla, rerum.
-                </p>
-                <p class="price">$18.95</p>
-              </div>
+          </div>
+          <div class="product">
+            <img
+              src="./images/products-section/red-curry.jpg"
+              alt="Red curry image"
+            />
+            <div>
+              <h4>Red curry</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
+                rerum.
+              </p>
+              <p class="price">$18.95</p>
             </div>
           </div>
         </div>
-        <div class="row-odd">
+        <div class="row odd">
           <div class="product">
             <img
               src="./images/products-section/spicy-veggies.jpg"
@@ -148,50 +150,62 @@
               </p>
               <p class="price">$11.95</p>
             </div>
-            <div class="product">
-              <img
-                src="./images/products-section/spicy-mix.jpg"
-                alt="Spicy mix image"
-              />
-              <div>
-                <h4>Spicy Mix</h4>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Nulla, rerum.
-                </p>
-                <p class="price">$11.95</p>
-              </div>
+          </div>
+          <div class="product">
+            <img
+              src="./images/products-section/spicy-mix.jpg"
+              alt="Spicy mix image"
+            />
+            <div>
+              <h4>Spicy Mix</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
+                rerum.
+              </p>
+              <p class="price">$11.95</p>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End of Product showcase section -->
-    <section class="testimonials">
-      <div class="testimonial">
-        <h3>Traditional cusine made easy</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-          similique ipsam quisquam exercitationem repudiandae voluptatem est
-          iste! Autem optio atque, dolor aut error perferendis repellat.
-        </p>
+    <section class="highlight">
+      <img
+        class="left-bg"
+        src="./images/ad-section-bg-left.svg"
+        alt="Background decoration"
+      />
+      <div class="container">
+        <div>
+          <h3>Traditional cusine made easy</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+            similique ipsam quisquam exercitationem repudiandae voluptatem est
+            iste! Autem optio atque, dolor aut error perferendis repellat.
+          </p>
+        </div>
+        <div class="cpager">
+          <div class="counter"></div>
+          <div class="counter"></div>
+          <div class="counter"></div>
+        </div>
+        <ul class="tags">
+          <li>Meals</li>
+          <li>Spices</li>
+          <li>Book</li>
+          <li>Gallery</li>
+        </ul>
       </div>
-      <div class="cpager">
-        <i class="fa fa-circle"></i>
-        <i class="fa fa-circle"></i>
-        <i class="fa fa-circle"></i>
-      </div>
-      <ul class="tags">
-        <li>Meals</li>
-        <li>Spices</li>
-        <li>Book</li>
-        <li>Gallery</li>
-      </ul>
+      <img
+        class="right-bg"
+        src="./images/ad-section-bg-right.svg"
+        alt="Background decoration"
+      />
     </section>
-    <!-- End of Testimonials section -->
+    <!-- End of Highlight section -->
     <section class="discover">
-      <h3>Discover</h3>
-      <p>Our New Menu</p>
+      <h3 class="title">Discover</h3>
+      <p class="sub-title">Our New Menu</p>
       <div class="products">
         <div class="product">
           <img
