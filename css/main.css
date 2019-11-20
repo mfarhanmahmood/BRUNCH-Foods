@@ -19,10 +19,6 @@ body {
   color: #fff;
 }
 
-img {
-  max-width: 100%;
-}
-
 /* Custom Classes */
 
 .container {
@@ -68,7 +64,7 @@ img {
 header {
   padding: 2% 10%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
 }
 
 #logo {
@@ -146,7 +142,14 @@ nav a:hover {
 .site-info {
   display: grid;
   grid-template-columns: 7fr 3fr;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 0;
+}
+
+.site-info .info-img {
+  display: flex;
+  align-items: center;
 }
 
 .site-info .descp {
@@ -156,7 +159,7 @@ nav a:hover {
 .site-info .descp h2 {
   font-weight: bold;
   font-size: 1.75em;
-  margin-bottom: 25px;
+  margin-bottom: 0.5em;
 }
 
 .site-info .descp p {
@@ -193,6 +196,9 @@ nav a:hover {
   background-size: cover;
   padding: 10% 10%;
 }
+.products-showcase img {
+  width: 100%;
+}
 
 .products-showcase > div {
   background-color: var(--fadded-bg-color);
@@ -214,21 +220,22 @@ nav a:hover {
 .products-showcase .odd .product {
   display: grid;
   grid-template-areas: 'image info';
+  grid-template-columns: 1fr 1fr;
 }
 .products-showcase .even .product {
   display: grid;
   grid-template-areas: 'info image';
+  grid-template-columns: 1fr 1fr;
 }
 
-.products-showcase .product img {
+.products-showcase .product .img {
   grid-area: image;
 }
 
-.products-showcase .product div {
+.products-showcase .product .info {
   grid-area: info;
   color: var(--main-bg-color);
   margin: auto 0;
-  padding: 0 12.5%;
   text-align: center;
 }
 
@@ -588,7 +595,13 @@ footer {
   color: var(--main-bg-color);
   padding: 5% 15%;
   display: grid;
-  grid-template-columns: 2.5fr repeat(3, 1fr);
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  column-gap: 7.5%;
+}
+
+footer .col-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   column-gap: 7.5%;
 }
 
@@ -612,6 +625,376 @@ footer ul li {
   padding-bottom: 2%;
 }
 
-footer div:last-child ul {
+footer > div:last-child ul {
   font-weight: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Custom classes */
+  .container {
+    width: 90%;
+    margin: 2.5% auto;
+  }
+
+  .title {
+    font-family: var(--title-font);
+    text-align: center;
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--main-bg-color);
+  }
+
+  .sub-title {
+    font-size: 2.75em;
+    font-stretch: ultra-expanded;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    width: 100%;
+  }
+
+  /* Front-page responsiveness */
+  header {
+    padding: 2% 5%;
+  }
+
+  #logo {
+    font-size: 1.75em;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  /* Splash screen style */
+
+  .splashScreen {
+    padding: 2.5% 5%;
+  }
+
+  .splashScreen .sub-title {
+    margin-top: -5%;
+  }
+
+  .splashScreen button a {
+    width: 100%;
+    padding: 2.5% 8%;
+    font-size: 2em;
+  }
+
+  /* Site information section styles */
+
+  .site-info {
+    grid-template-columns: 5fr 2fr;
+  }
+  .site-info .descp h2 {
+    font-size: 1.25em;
+  }
+
+  .site-info .descp p {
+    line-height: 1.5em;
+  }
+
+  /* Product services section styles */
+
+  .product-services {
+    padding: 7.5%;
+  }
+
+  .product-services h3 {
+    margin: 5% 0 2.5% 0;
+    font-size: 1em;
+  }
+
+  .product-services p {
+    padding-right: 8.5%;
+    font-size: 0.95em;
+  }
+
+  /* Products showcase section styles */
+
+  .products-showcase {
+    padding: 5%;
+  }
+
+  .products-showcase .sub-title {
+    margin-top: -1%;
+    margin-bottom: 2%;
+  }
+
+  .products-showcase .product h4 {
+    font-size: 1em;
+    margin-bottom: 2.2%;
+  }
+
+  .products-showcase .product p {
+    font-size: 0.95em;
+  }
+
+  .products-showcase .product .price {
+    margin-top: 0.5em;
+    font-weight: bold;
+  }
+
+  /* Highlight designs */
+
+  /* Discover section styles */
+  .discover {
+    padding-bottom: 0;
+    overflow: auto;
+  }
+
+  .discover .container {
+    margin: 10% 0 0 0;
+    width: 100%;
+    padding: 1.25% 5% 10% 5%;
+  }
+
+  .discover .sub-title {
+    font-size: 2.5em;
+    margin-top: -1%;
+    margin-bottom: 2.5%;
+  }
+
+  .discover .products {
+    column-gap: 5%;
+  }
+
+  .discover .product {
+    grid-template-columns: 1.5fr 5fr;
+    column-gap: 2%;
+  }
+
+  .discover .product .img {
+    padding: 0 1%;
+  }
+  .discover .product img {
+    width: 60%;
+  }
+
+  /* Booking section seperator style */
+  .seperator-top,
+  .seperator-bottom {
+    min-width: 100%;
+    min-height: 25vh;
+  }
+
+  /* Booking section styles */
+
+  .booking fieldset {
+    margin-bottom: 5%;
+  }
+
+  .booking fieldset > div {
+    column-gap: 10%;
+  }
+
+  .booking input,
+  .booking select {
+    width: 100%;
+    padding: 2% 1.2% 2% 3%;
+    font-size: 0.8em;
+  }
+
+  .booking .select-div:after {
+    left: 85%;
+  }
+
+  .booking input[type='submit'] {
+    width: 25%;
+    padding: 0.5% 2.5%;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    cursor: pointer;
+    transition: all 0.35s ease-in;
+  }
+
+  /* Menu section styles */
+  .menu {
+    padding: 2.5% 10%;
+  }
+
+  .menu .title {
+    font-size: 3em;
+  }
+
+  .menu .sub-title {
+    font-size: 2em;
+    margin-top: -2%;
+    margin-bottom: 2%;
+  }
+
+  /* Footer styles */
+  footer {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Custom classes */
+  .container {
+    width: 90%;
+    margin: 2.5% auto;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .sub-title {
+    font-size: 1.25em;
+  }
+
+  /* Front-page responsiveness */
+  header {
+    padding: 2% 5%;
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  #logo {
+    font-size: 1.75em;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 1em;
+    padding: 2.5% 0;
+  }
+
+  /* Splash screen style */
+
+  .splashScreen {
+    width: 60%;
+    padding: 2.5% 5%;
+  }
+
+  .splashScreen .sub-title {
+    margin-top: -2.5%;
+  }
+
+  .splashScreen button a {
+    width: 100%;
+    padding: 2.5% 8%;
+    font-size: 1.25em;
+  }
+
+  /* Site information section styles */
+
+  .site-info {
+    grid-template-columns: 100%;
+  }
+
+  /* Product services section styles */
+
+  .product-services {
+    padding: 15% 7.5%;
+    grid-template-columns: 100%;
+    row-gap: 5%;
+  }
+
+  /* Products showcase section styles */
+
+  .products-showcase .row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .products-showcase .row .product:first-child {
+    grid-template-areas: 'image info';
+  }
+  .products-showcase .row .product:last-child {
+    grid-template-areas: 'info image';
+  }
+
+  /* Highlight designs */
+
+  .highlight .container {
+    width: 95%;
+    margin-bottom: 2%;
+  }
+
+  .highlight ul {
+    list-style: none;
+    width: 90%;
+    margin: 3% auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    color: var(--main-bg-color);
+  }
+
+  /* Discover section styles */
+
+  .discover .container {
+    padding: 1.25% 5% 5% 5%;
+  }
+
+  .discover .products {
+    padding-bottom: 1%;
+    grid-template-columns: 100%;
+    column-gap: 0;
+    row-gap: 5%;
+  }
+
+  /* Booking section styles */
+
+  .booking {
+    padding: 2.5% 12.5% 2% 12.5%;
+    color: #fff;
+    overflow: auto;
+  }
+
+  .booking fieldset {
+    margin-bottom: 20%;
+  }
+
+  .booking fieldset > div {
+    grid-template-columns: 100%;
+    row-gap: 10%;
+  }
+
+  .booking .select-div:after {
+    left: 90%;
+  }
+
+  .booking input[type='submit'] {
+    display: block;
+    width: 50%;
+    padding: 1.5% 2.5%;
+    position: static;
+    margin: 0 auto;
+  }
+
+  /* Menu section styles */
+  .menu > div {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 3.5%;
+    margin-bottom: 50.5%;
+  }
+
+  /* Testimonials section styles */
+  .testimonials {
+    text-align: center;
+    padding: 5%;
+  }
+
+  /* Footer styles */
+  footer {
+    grid-template-columns: 1fr;
+    row-gap: 2.5%;
+    padding-bottom: 20%;
+  }
 }
